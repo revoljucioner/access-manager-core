@@ -1,13 +1,14 @@
 ﻿using AccessManager.Models.Enum;
 using Microsoft.AspNetCore.Authorization;
+using System.Data;
 
 namespace AccessManager.Sso.Attributes
 {
     public class AuthorizeCustomAttribute : AuthorizeAttribute
     {
-        public AuthorizeCustomAttribute(UserRole role)
+        public AuthorizeCustomAttribute(params UserRole[] roles)
         {
-            Roles = role.ToString();
+            Roles = string.Join(",", roles.Select(i => i.ToString()));
         }
     }
 }
