@@ -17,15 +17,4 @@ namespace AccessManager.Models.Database
         [Column("department_id")]
         public Guid? DepartmentId { get; set; }
     }
-
-    public class EmployeeInfo
-    {
-        public Guid Id { get; set; }
-
-        public string FirstName { get; set; }
-
-        public string LastName { get; set; }
-
-        public Guid? DepartmentId { get; set; }
-    }
 }

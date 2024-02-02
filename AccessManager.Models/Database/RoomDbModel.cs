@@ -11,11 +11,4 @@ namespace AccessManager.Models.Database
         [Column("name")]
         public string Name { get; set; }
     }
-
-    public class RoomInfo
-    {
-        public Guid Id { get; set; }
-
-        public string Name { get; set; }
-    }
 }
