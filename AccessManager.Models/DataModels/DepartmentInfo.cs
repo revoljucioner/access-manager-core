@@ -1,12 +1,15 @@
 ﻿using AccessManager.Models.Database;
 using AccessManager.Models.Requests.AccessHistory;
+using Newtonsoft.Json;
 
 namespace AccessManager.Models.DataModels
 {
     public class DepartmentInfo
     {
+        [JsonProperty("id")]
         public Guid Id { get; set; }
 
+        [JsonProperty("name")]
         public string Name { get; set; }
 
         public static explicit operator DepartmentInfo(DepartmentDbModel db) => new DepartmentInfo
